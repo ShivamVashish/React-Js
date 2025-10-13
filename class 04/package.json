@@ -1,0 +1,18 @@
+{
+  "name": "class-04",
+  "version": "1.0.0",
+  "description": "<!-- Bundler ka km kya hota h hmare code ko optimize way m likhna  -->\r <!-- Ab mera HTML react se jo render kia tha wo show nhi hora kyu nhi hora kyuki hmne phele cdn link dale hue react ke or react-dom ke the bss ab html wala hi show hora h -->\r <!-- ab hme use krege react or react-dom jo hmare node modules ke andr rkha hua h -->\r <!-- ye krna hoga bss import React from 'react\" or import ReactDOM from 'react-dom/client' -->\r <!-- Cannot use import statement outside a module ye error arri h console m  ye isliye arri h import hmari hai to javascript hi but ye modern javascript ka part h-- iss error ko htane ke liye mujhe apne script tag m type=\"module likhna pdega but ye ab bhi nhi phechan para to hhme ab teriminal m \r npx parcel index.html asa krne se ye ek localhost server create krke de dega>",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
