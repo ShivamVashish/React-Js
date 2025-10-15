@@ -47,3 +47,27 @@ agr kisi funcition ka nm hme change krna h to uske name ke agge as likh kr dusra
 
 Question : Why learn React ?
 Answer : React most efficient way DOM ko manupulate(HTML file m kuch changes krna ) krta h or mujhe sirf apna UI bnane pr focus krna chiaye
+
+hmne button pr onClick lgaya or usme andr dala ek arraySort callback function or phir wo functio ke andr sort kr dia 
+function sortArray(){
+    arry.sort((a,b)=>a.Price - b.Price)
+    console.log(arry);
+}
+<button onClick={sortArray}>Sort by Price</button>
+ye function to clra h hmara but ye hme UI m abhi show nhi hora console.log m hora h 
+UI m update krne ke liye hme useState ka use krna hoga jse class 07 m kia h but ye class 06 h
+to useState(arry) current arry dala or uski value dali A m or setA nm ka function bna dia 
+or ab Hme Arry ka nm A rkh dia h to map bhi ussi pr lgega or phir mne jse hi mere A m kuch change hoga to setA ko call kr liye asa setA(A) 
+but button pr click krne pr ab bhi ye UI m change nhi kra 
+
+Iska rule h jse ki class 07 m useState ne dekha ki count = count + 1 tumhari value change hori h kyuki ye change hoti h isliye iska memory location bhi change hoti h isliye hi change hoti h jbki array m kuch nhi hota
+but useState ne dekha ki array(A) to A h ye to jha thi whi h because array hota h heap m store wo bhi as a reference jb wo whi pe h apni location pr to wo change kyu krega phele bhi ussi location pr tha ab bhi whi pe h wo mna kr dega state memory location dekhata h 
+
+isko show kran ke liye mujhe array ka clone bnana pdega tb hoga ye change jiska refererence dusra hoga 
+setA(A) iska jgah isne ek dublicate(clone) bna dia jise new memory locatio milge or spread operator se hmne ye bna lia 
+setA([...A]) ye location change hui haina isliye A sort ho gya kyuki useState ko chaiye changes wo hua h ab reference se change hokr isliye ab usen change kr dia 
+
+React dobra value ko cahnge nhi krne deta agr koi chez zero h to wo phir se zero nhi krta js asa hi krta h 
+
+
+jb filterbutton pr click krge to wo hmar sbse phle setA(B) ye execute hoga or phir call krega App wale function ko phir jo bhi value hmari filter hokr ayi wo use state m cli jaygi or useState arry wo filter hua data A ko bhej degi or phir yha pr hmara data update hora h A m wha cla jyga or show hoga phir display pr

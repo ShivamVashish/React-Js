@@ -8,8 +8,8 @@ function Card(props) {
       <div className="text-white mt-3">
         <h2 className="font-bold text-lg md:text-2xl">{props.cloth}</h2>
         <h1 className="font-bold text-xl md:text-3xl">{props.Offer}</h1>
-        <h2 className="font-semibold mt-1 underline cursor-pointer">Shop Now</h2>
-        <h2 className="font-semibold mt-1 underline cursor-pointer">Price : {props.Price}</h2>
+        <h2 className="font-semibold mt-1 cursor-pointer">Shop Now</h2>
+        <h2 className="font-semibold mt-1 cursor-pointer">Price : {props.Price}</h2>
       </div>
       <div>
       </div>
