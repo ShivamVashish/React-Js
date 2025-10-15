@@ -71,3 +71,15 @@ React dobra value ko cahnge nhi krne deta agr koi chez zero h to wo phir se zero
 
 
 jb filterbutton pr click krge to wo hmar sbse phle setA(B) ye execute hoga or phir call krega App wale function ko phir jo bhi value hmari filter hokr ayi wo use state m cli jaygi or useState arry wo filter hua data A ko bhej degi or phir yha pr hmara data update hora h A m wha cla jyga or show hoga phir display pr
+
+jo bhi value hme yha pr update krvani h 
+let [A,setA] = useState(arry)
+  function sortArray(){
+    A.sort((a,b)=>a.Price - b.Price)
+    setA([...A])
+}
+function sortFilter(){
+ const B =  arry.filter((value)=>value.Price>699)
+  setA(B) // wo yha se bhi ho skti h yha pr pass kr skte ho agli bar wo value ispe hi update hogi ro sbhi lgah B ki hi value change hogi 
+}
+
