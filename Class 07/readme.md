@@ -51,10 +51,10 @@ asa krne se khi bhi count ki value hogi jse button m hi (<button onClick={decrem
 How its Works 
 jb bhi hm setCount(count) function ko call krege to ye kya krta h ki apne main function Counter ko phir se call krega 
 jse globally mere count ki value 0 thi jse hi mne increament wali button ko click kia count ki value 1 hogi to count = count + 1 cla hoga or jse hi setCount wala clta h ye kheta ki h ki mujhe Counter function ko dobarq call krna h to use or sbhi jo bhi statement hoga usko execute kra dega phir Counter ko call kr dega jo bhi h
-hme count ki value increase huii h wo automatically useState(1) ke andr cli jaygi  ab count = 1 se initailize hoga or wo ande dekhega jha bhi value hogi count ki dynamically wha pe update kr dega 
+hme count ki value increase huii h wo automatically useState(1) ke andr cli jaygi  ab count = 1 se initailize hoga or wo andr dekhega jha bhi value hogi count ki dynamically wha pe update kr dega 
 
 sbse phle seCount(count) jb clta h wo dekhta h ki count = 0 to wo jha bhi count dynamically define h wha like 
-useState(0) or button pr bhi sbhi jgah zero kr dega or phir jse hi hmne increamnet wale button pr click kia to usse value ho gyi increate meri phir se or phir setCount functino phir cla or usen jo value increment hui h wo sbhi jgah update krdi 
+useState(0) or button pr bhi sbhi jgah zero kr dega or phir jse hi hmne increamnet wale button pr click kia to usse value ho gyi increament meri phir se or phir setCount function phir cla or usen jo value increment hui h wo sbhi jgah update krdi 
 
 Use state ko hm conditional statement m nhi dal skte 
 
