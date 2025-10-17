@@ -1,17 +1,27 @@
-import { useEffect, useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 function Body(){
     const [Profile,setProfile] = useState([])
     const [numberofprofile,setNumberofprofile] = useState('')
-    async function GenerateProfile(count){
-        let random = Math.floor(Math.random()*10000)
-    
-      const response = await  fetch(`https://api.github.com/users?since=${random}&per_page${count}`)
-      const data = await response.json();
-        
-      setProfile(data)
+  const GenerateProfile = useCallback(async (count)=>{
+    if(!count || count <=0){
+        alert("Please enter a valid number of profiles");
+        return
     }
+    try{
+        let random = Math.floor(Math.random()*10000)
+      const response = await fetch(`https://api.github.com/users?since=${random}&per_page=${count}`);
+      if(!response.ok){
+        throw new Error(`HTTPS Error :${response.status}`)
+      }
+      const data = await response.json();
+      setProfile(data)
+      
+    }catch(error){
+            console.log("Error fetching profiles");
+    }
+    },[])
     useEffect(()=>{
-        GenerateProfile()
+        GenerateProfile(10)
     },[])
     return(
         <div className="mt-15">
