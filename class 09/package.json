@@ -1,0 +1,17 @@
+{
+  "name": "class-09",
+  "version": "1.0.0",
+  "description": "<!-- Closeure Important or React for Interview kha use hota h or kse use hota h \r imse char cheze change hori h to isme 4 hi state use hoge,jse counter m sirf number change hora tha backgroundColor wale m bhi bss bgColor hi change hora tha to ek hi useState use hora tha",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
