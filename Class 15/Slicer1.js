@@ -13,4 +13,6 @@ const reactSlice =  createSlice({
     }
 })
 
-export default reactSlice.reducer
+export const {Increment,Decrement,Reset} =  reactSlice.actions
+
+export default reactSlice.reducer;

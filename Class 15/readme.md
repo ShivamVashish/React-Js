@@ -173,3 +173,44 @@ state jo h wo hme redux ki global state lakr deta h or phir hm koi bhi slice ka 
 
 
 UseDispatch(hooks) bhi hmara react-redux se ata h 
+
+hm counting m state ke niche rkhege or button pr onclick krne pr cla denga asa 
+import { useDispatch, useSelector } from "react-redux"
+export default function Counting(){
+   const count =  useSelector((state)=> state.slice1.count)
+   const dispatch = useDispatch()
+    return(
+        <div>
+            <h1>Count is : {count}</h1>
+            <button onClick={()=>dispatch(Increment())}>Increment</button>
+            <button onClick={()=>dispatch(Decrement())}>Decrement</button>
+            <button onClick={()=>dispatch(Reset())}>Reset</button>
+        </div>
+    )
+}
+.actions jo h ye hmne sare function lakr de deta h
+or ab ye puchega ki Increment kya to hm in sb reducer(function ko) export krege Slicer.js se asa or phir hm counting file m isko import kra lenge
+import { Increment,Decrement,Reset } from "../Slicer1"
+export const {Increment,Decrement,Reset} =  reactSlice.actions
+
+
+ab sbse baad m apni script file m 
+import {Provider} from "react-redux" ye ayega hmara react-redux se or yhi hm hm apni main file m Stores ko bhi import krege
+import Stores from "./Stores"
+
+ab jo hm main file m counting function(file) ko run kr rhe the wo provider ke andr rkh denga provider isliye bnaya taki ye global store  ho iska access har kisi ke pass ho asa
+
+<div>
+<Provider store={Stores}> // store ke andr daal denege stores funciton(files)
+<Counting></Counting> iis trah har koi stores ko access kr skta h 
+</Provider>
+</div>
+
+Hm counting file m Increment function ,decrement funciton hi kraya hme pta kse clega ki kiska h ye to kitno ke part ho skta h mujhe kse pta clega ki konsi slice h Incremnet function ek object h or uske andr sb kuch information slice1/Increment iss trah se information h 
+
+JO mne export const {Increment,Decrement,Reset} =  reactSlice.actions iss trah se export kraya h isko m kisi or trah bhi bhi export kra skta h but 
+butye jo .actions  and reacSlice.actions ye h ki iss reactSlice object ke pass koi actions propertiy h jo ye sb mujhe deri h 
+
+Redux Toolkit kya krta h hmara pass
+Jb bhi hme kuch create krna h stores create krna h slice create krna h to redux toolkit
+Hooks use krne h react-redux se lekr aoga kyuki hm react-redux ko communicate kra rha hu  redux toolkit ka km h kuch create krne ka simple hmara store ko bhi create kr rha or slices ko bhi create kr rha h 
