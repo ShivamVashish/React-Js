@@ -1,0 +1,19 @@
+{
+  "name": "class-17",
+  "version": "1.0.0",
+  "description": "<!-- Jb bhi hm fetch operation krte h to 3 stage hoti h hmare pass 1.Pending 2.Fullfilled(resolve) 3.Rejected\r Ab mn lo mujhe Github se data lana h or usko save krana h ek variables ke andr \r ab isme 3 variables hoge mere pass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
