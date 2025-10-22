@@ -1,0 +1,20 @@
+{
+  "name": "class-18",
+  "version": "1.0.0",
+  "description": "<!-- React Internally working (Khete haina ki react code ko bht optimize kr deta ,fast etc asa kyu khete h) \r Ek Jb bhi hma child component lete h usme hm keys ko attach krte h kyu krte h\r Javascript m asi kya prblm thi ke hm react pdhne ki jarurt pdi hm jsx ko js ke sath bhi likh skte h kya prblem thi dekho",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.9.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
+    "redux": "^5.0.1"
+  },
+  "devDependencies": {
+    "parcel": "^2.16.0"
+  }
+}
