@@ -70,3 +70,16 @@ asynchronous code (createAsyncThunk) me slice ka naam manually likhne ki zarurat
 kyunki Redux Toolkit khud hi thunk ke through action types handle kar leta hai.
 
 ye jo extraReducer ke andr jo builder hota h wo dynamic hota h or but iske andr jo bhi hota h wo internally ek object hi hota h 
+
+jb bhi hm dispatch krte h wo jata h hmara stores m or stores ke pass hoti slice:reducers ye information hoti h hmara slice ki sb store dispatch(fetchdata(20)) ko dekhega or iske type pr dhyan dega lekin ye fetchdata action nhi h ye ek funciton h iska type hai hi nhi ek noraml function h store isko handle nhi kr skta h
+dispatch(fetchdata(20)) <===Middlewerar===> Stores (jo hma phle increamnet bhejte wo as action jata h but yha nhi h asa) isko Middlewear handle krta h store isko isme isliye handle nhi kr paa rha h kyuki ye action nhi h action m type mention hota h action m type mention hota h ki {type:slice/Increment(suppse)} to middle ye dekhat hi fetchdata(20) ye koi action nhi h isko call krye isko slice store ke pass nhi jne dega 
+
+Ab sbhi state ko handle krega createAsyncThunk function ab jb ye fetch data ke liye store m jayga to store sbse phele ye dekhta h ki uske action m type kya h uska slice ka nme but agr fetchData(20) m slice ka nme nhi to store usko sbhi slice pass on kr deta h phir createAsyncThunk jo uske liye useful h usko use kr lega to baki ko return kr dega 
+kyuki jo hmare normal reducer hote h unke pass slice ka nm hona jaruri h but hmara jo extraReducers h unke pass slice ka nm hone jaruri nhi hai or dispatch(fetchData(20)) bhi hmara extraReducers se hi arra h 
+
+Note =>Sir normal reducers are used to slice the name for fetching the data, but extraReducers are not required to slice the name for fetching data noraml reducers hmara synchronous action run krte h or extraReducers hmara asynchronous code ko run krta h 
+
+Imse extraReducer wale ke smne nm slice ka nm kyu ni likha kyuki ye multiple slice ka pass jara h ye hmari coding khrab ho jayga ye error nhi asa kyu kia h 
+example:
+suppose mujhe koi user data:display kreyga to iski alg slice3 h ; ek new h jo user:Post:Dispaly:Slice4 ek andr 
+ab jo mujhe data fetch krna h wo mujhe slice3 ke andr bhi bjhena h or slice 4 ke andr bhi bhejna h isliye usne slice ka nm nhi dia kyuki agr name mention kr deta slice ka phir wo ek hi slice ke andr ja skta tha but ab wo kisi bhi slice ke andr ja sktah 
